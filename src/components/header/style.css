@@ -1,0 +1,31 @@
+.header {
+  background-color: rgb(10, 10, 10);
+  height: 11vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  margin-left: 15px;
+  font-family: 'Comforter', cursive;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.title__green {
+  color: #008000;
+}
+
+.title__red {
+  color: #ff0000;
+}
+
+.basketIcon {
+  color: white;
+  margin-right: 32px;
+  font-size: 28px;
+}

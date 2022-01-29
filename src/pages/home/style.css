@@ -1,5 +1,9 @@
-.header {
+.home {
   background-color: rgb(10, 10, 10);
+  height: 100vh;
+}
+
+.header {
   height: 11vh;
   position: sticky;
   top: 0;
@@ -28,4 +32,19 @@
   color: white;
   margin-right: 32px;
   font-size: 28px;
+}
+
+.main {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pizza-name {
+  font-family: 'Source Serif 4', sans-serif;
+  font-weight: 500;
+  font-size: 4rem;
+  width: auto;
+  margin: 0;
+  color: #fff;
 }

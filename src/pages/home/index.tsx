@@ -12,9 +12,16 @@ function Home() {
       </header>
       <main className="pizza">
         <h2 className="name__pizza">Seafood pizza</h2>
-        <div className="description__pizza">
-          <div className="igredients__pizza"></div>
-        </div>
+        <section className="description__pizza">
+          <div className="igredients__description">
+            <h3 className="title__igredients">Igredients: </h3>
+            <p className="igredients__igredients">tomato sauce, mozzarella cheese, cocktail shrimps, salmon, mussels, lemon, parsley.</p>
+          </div>
+          <div className="price__description">
+            <h3 className="title__price">Price: </h3>
+            <span className="price__price">$18.00</span>
+          </div>
+        </section>
       </main>
     </div>
   )

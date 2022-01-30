@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Oswald:wght@400;700&family=Source+Serif+4:wght@500&family=Supermercado+One&display=swap');
+
 :root {
   --main-color-home: rgb(10, 10, 10);
 }
@@ -47,7 +49,7 @@
 .amount__basket {
   position: relative;
   border-radius: 50%;
-  background-color: yellow;
+  background-color: rgb(255, 255, 0);
   color: var(--main-color-home);
   width: 18px;
   top: -6px;
@@ -71,4 +73,49 @@
   width: auto;
   margin: 0;
   color: #fff;
+}
+
+.description__pizza {
+  margin-top: 5px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.igredients__description {
+  color: rgb(133, 133, 133);
+  font-family: 'Oswald', sans-serif;
+  width: 56%;
+}
+
+.title__igredients {
+  font-weight: 700;
+  margin: 0;
+}
+
+.igredients__igredients {
+  font-weight: 400;
+  margin: 5px 0 0 0;
+}
+
+.price__description {
+  width: 42%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title__price {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  color: rgb(133, 133, 133);
+}
+
+.price__price {
+  font-family: 'Supermercado One', cursive;
+  font-weight: 400;
+  color: rgb(255, 255, 0);
+  text-align: center;
+  font-size: 3rem;
 }

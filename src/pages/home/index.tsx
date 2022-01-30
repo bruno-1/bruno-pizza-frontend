@@ -5,10 +5,13 @@ function Home() {
     <div className="home">
       <header className="header">
         <h1 className="title"><span className="title__green">Bru</span>no Pi<span className="title__red">zza</span></h1>
-        <i className="basketIcon fas fa-shopping-basket"></i>
+        <div className="basket">
+          <i className="basket__icon fas fa-shopping-basket"></i>
+          <span className="amount__basket">1</span>
+        </div>
       </header>
       <main className="main">
-        <h2 className="pizza-name">Seafood pizza</h2>
+        <h2 className="pizzaName">Seafood pizza</h2>
         <div className="description"></div>
       </main>
     </div>

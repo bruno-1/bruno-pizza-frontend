@@ -1,5 +1,9 @@
+:root {
+  --main-color-home: rgb(10, 10, 10);
+}
+
 .home {
-  background-color: rgb(10, 10, 10);
+  background-color: var(--main-color-home);
   height: 100vh;
 }
 
@@ -28,19 +32,39 @@
   color: #ff0000;
 }
 
-.basketIcon {
+.basket {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.basket__icon {
   color: white;
-  margin-right: 32px;
   font-size: 28px;
 }
 
+.amount__basket {
+  position: relative;
+  border-radius: 50%;
+  background-color: yellow;
+  color: var(--main-color-home);
+  width: 18px;
+  top: -6px;
+  left: -10px;
+  padding: 1px;
+  text-align: center;
+  font-family: 'Supermercado One', cursive;
+  font-weight: 400;
+}
+
 .main {
-  width: 90%;
+  width: 88%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.pizza-name {
+.pizzaName {
   font-family: 'Source Serif 4', sans-serif;
   font-weight: 500;
   font-size: 4rem;

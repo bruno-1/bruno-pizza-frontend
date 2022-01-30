@@ -7,7 +7,7 @@
   height: 100vh;
 }
 
-.header {
+.header__home {
   height: 11vh;
   position: sticky;
   top: 0;
@@ -16,7 +16,7 @@
   align-items: center;
 }
 
-.title {
+.title__header {
   color: white;
   margin-left: 15px;
   font-family: 'Comforter', cursive;
@@ -32,7 +32,7 @@
   color: #ff0000;
 }
 
-.basket {
+.basket__header {
   display: flex;
   justify-content: end;
   align-items: center;
@@ -58,13 +58,13 @@
   font-weight: 400;
 }
 
-.main {
+.pizza {
   width: 88%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.pizzaName {
+.name__pizza {
   font-family: 'Source Serif 4', sans-serif;
   font-weight: 500;
   font-size: 4rem;

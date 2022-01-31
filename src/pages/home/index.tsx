@@ -34,7 +34,7 @@ function Home() {
         </section>
       </main>
       <footer className="footer">
-        <img className="img__footer" src="https://png2.cleanpng.com/dy/3c2df8749ee049cc6e09ea9d2cebb011/L0KzQYm3UsI5N5p6j5H0aYP2gLBuTgBqgqtmRdt9YXzscbA0gCVqe5pzfZ9saHX1gsq0lP9uaaV0ReZqa3Wwf8b7TgBme6V0ReVuYXbyf7W0kPl7gpIyTdMENnWzdIK8VcZna2kzSakDM0e4RYW4VcE6QGQ8S6s8M0WxgLBu/kisspng-pizza-italian-cuisine-cherry-tomato-take-out-pesto-seafood-pizza-5a96e0d1556fc8.17837554151983739335.png" alt="Seafood pizza" />
+        <img className="img__footer" src="/images/seafood-pizza.png" alt="Seafood pizza" />
       </footer>
     </div>
   )

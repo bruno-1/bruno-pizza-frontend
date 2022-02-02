@@ -1,3 +1,4 @@
+import Button from "../../components/button";
 import "./style.css"
 
 function Home() {
@@ -34,6 +35,7 @@ function Home() {
         </section>
       </main>
       <footer className="footer">
+        <Button className="button">GO TO MENU</Button>
         <img className="img__footer" src="/images/seafood-pizza.png" alt="Seafood pizza" />
       </footer>
     </div>

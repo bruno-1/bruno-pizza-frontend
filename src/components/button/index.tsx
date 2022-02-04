@@ -6,7 +6,7 @@ interface BtnProps extends ButtonHTMLAttributes<HTMLButtonElement> { }
 class Button extends Component<BtnProps> {
 
   render() {
-    return (<button className="button" >{this.props.children}</button>)
+    return (<button className="button">{this.props.children}</button>)
   }
 }
 

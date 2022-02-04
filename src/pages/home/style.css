@@ -1,167 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Oswald:wght@400;700&family=Source+Serif+4:wght@500&family=Supermercado+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Oswald:wght@400;700&family=Source+Serif+4:wght@600;700&family=Supermercado+One&display=swap');
 
-:root {
-  --main-color-home: rgb(10, 10, 10);
-}
-
-.home {
-  background-color: var(--main-color-home);
-  height: 100vh;
-  overflow: hidden;
-}
+.home { background-color: #0a0a0a; }
 
 .header__home {
-  height: 11vh;
-  position: sticky;
-  top: 0;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  height: 9vh;
   align-items: center;
 }
 
 .title__header {
-  color: white;
-  margin-left: 15px;
+  color: #fff;
+  margin: 0;
+  margin-left: 25px;
   font-family: 'Comforter', cursive;
-  font-size: 36px;
   font-weight: 400;
 }
 
-.title__green {
-  color: #008000;
-}
+.green { color: #008000; }
 
-.title__red {
-  color: #ff0000;
-}
+.red { color: #ff0000; }
 
 .basket__header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: 12px;
+  color: #fff;
+  margin-left: auto;
+  margin-right: 25px;
 }
 
-.basket__icon {
-  color: white;
-  font-size: 28px;
-}
+.icon__basket { font-size: 1.5rem; }
 
 .amount__basket {
-  position: relative;
-  border-radius: 50%;
-  background-color: #ff0000;
-  color: var(--main-color-home);
-  width: 18px;
-  top: -6px;
-  left: -10px;
-  padding: 1px;
-  text-align: center;
   font-family: 'Supermercado One', cursive;
   font-weight: 400;
-  color: #fff;
+  font-size: 11px;
+  text-align: center;
+  background-color: #ff0000;
+  border-radius: 50%;
+  padding: 6px;
+  position: relative;
+  bottom: 15px;
+  right: 8px;
 }
 
-.pizza {
-  width: 88%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 54vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.pizza__main {
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .name__pizza {
-  font-family: 'Source Serif 4', sans-serif;
-  font-weight: 500;
-  font-size: 4rem;
-  width: auto;
+  color: white;
   margin: 0;
-  color: #fff;
+  font-family: 'Source Serif 4', sans-serif;
+  font-weight: 600;
+  width: fit-content;
+  font-size: 3.2rem;
 }
 
 .description__pizza {
-  margin-top: 5px;
-  display: flex;
   width: 100%;
-  align-items: center;
+  color: #919191;
+  display: flex;
   justify-content: space-between;
-}
-
-.igredients__description {
-  color: rgb(133, 133, 133);
   font-family: 'Oswald', sans-serif;
-  width: 56%;
+  margin-top: 15px;
 }
 
-.title__igredients {
-  font-weight: 700;
+.igredients__description { width: 55%; }
+
+.title__igredients, .title__price {
   margin: 0;
+  font-weight: 700;
 }
 
 .igredients__igredients {
   font-weight: 400;
-  margin: 5px 0 0 0;
-}
-
-.price__description {
-  width: 42%;
-  display: flex;
-  flex-direction: column;
-}
-
-.title__price {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 700;
   margin: 0;
-  color: rgb(133, 133, 133);
+  font-size: 1.2rem;
 }
+
+.price__description { width: 30%; }
 
 .price__price {
-  font-family: 'Supermercado One', cursive;
-  font-weight: 400;
-  color: #008000;
-  text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .exchange__pizza {
-  margin-top: 15px;
-}
-
-.button__exchange {
   display: flex;
   justify-content: space-between;
+  margin-top: 45px;
+  z-index: 999;
 }
 
-.left__button, .right__button {
+.left__exchange, .right__exchange {
   background: none;
-  border: none;
   padding: 0;
+  border: none;
 }
 
 .icon__left, .icon__right {
-  font-size: 34px; 
-  color: rgb(133, 133, 133);
+  color: white;
+  font-size: 2rem;
 }
 
 .footer {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  position: relative;
-  height: 100%;
 }
 
-.img__footer {
+.image__footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(0.95);
+}
+
+@media screen and (min-width: 600px) {
+  .image__footer {
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+  }
 }
 
 .button {
   width: 90%;
   position: absolute;
-  top: 25%;
+  margin-left: 5%;
+  bottom: 2.5%;
 }

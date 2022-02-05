@@ -2,7 +2,7 @@
 
 .home {
   background-color: #0a0a0a;
-  max-height: 100vh;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -40,14 +40,14 @@
 .amount__basket {
   font-family: 'Supermercado One', cursive;
   font-weight: 400;
-  font-size: 9px;
+  font-size: 7px;
   text-align: center;
   background-color: #ff0000;
   border-radius: 50%;
-  padding: 10px;
+  padding: 8px;
   position: relative;
-  bottom: 22px;
-  right: 10px;
+  bottom: 24px;
+  right: 12px;
 }
 
 .pizza__main {

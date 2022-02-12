@@ -1,27 +1,37 @@
+import { useEffect, useState } from "react";
 import Button from "../../components/button";
+import HeaderHome from '../../components/header-home';
 import "./style.css"
 
 function Home() {
+
+  const [pizza, setPizza] = useState(Object);
+  
+  useEffect(() => {    
+    async function getPizza() {
+      return await fetch('http://localhost:4000/pizza/seafood-pizza');
+    }
+    
+    getPizza().then(pizza => pizza.json()).then((pizza) => {
+      setPizza(pizza);
+    });
+  }, [pizza]);
+
+  
   return (
     <section className="home">
-      <header className="header__home">
-        <h1 className="title__header"><span className="green">Bru</span>no Pi<span className="red">zza</span></h1>
-        <div className="basket__header">
-          <i className="icon__basket fas fa-shopping-basket"></i>
-          <span className="amount__basket">1</span>
-        </div>
-      </header>
+      <HeaderHome />
       <main className="main">
         <section className="pizza__main">
-          <h2 className="name__pizza">Seafood pizza</h2>
+          <h2 className="name__pizza">{pizza.name}</h2>
           <div className="description__pizza">
             <div className="igredients__description">
               <h3 className="title__igredients">Igredients: </h3>
-              <p className="igredients__igredients">tomato sauce, mozzarella cheese, cocktail shrimps, salmon, mussels, lemon, parsley.</p>
+              <p className="igredients__igredients">{pizza.igredients}</p>
             </div>
             <div className="price__description">
               <h3 className="title__price">Price: </h3>
-              <span className="green price__price">$18.00</span>
+              <span className="green price__price">${pizza.price}</span>
             </div>
           </div>
           <div className="exchange__pizza">

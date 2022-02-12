@@ -1,0 +1,40 @@
+.header__home {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+}
+
+.title__header {
+  color: #fff;
+  margin: 0;
+  margin-left: 25px;
+  font-family: 'Comforter', cursive;
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+.green { color: #008000; }
+
+.red { color: #ff0000; }
+
+.basket__header {
+  color: #fff;
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.icon__basket { font-size: 2.5rem; }
+
+.amount__basket {
+  font-family: 'Supermercado One', cursive;
+  font-weight: 400;
+  font-size: 7px;
+  text-align: center;
+  background-color: #ff0000;
+  border-radius: 50%;
+  padding: 8px;
+  position: relative;
+  bottom: 24px;
+  right: 12px;
+}

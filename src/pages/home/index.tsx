@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
-import Button from "../../components/button";
-import HeaderHome from '../../components/header-home';
+import { lazy, useEffect, useState } from "react";
 import "./style.css"
 
 function Home() {
 
   const [pizza, setPizza] = useState(Object);
+
+  const HeaderHome = lazy(() => import("../../components/header-home"));
+  const Button = lazy(() => import("../../components/button"));
   
   useEffect(() => {    
     async function getPizza() {

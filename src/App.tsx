@@ -1,8 +1,8 @@
 // import Button from "./components/button";
 // import Home from "./pages/home";
-import { Suspense } from "react";
-import { Home } from "./lazy";
+import { lazy, Suspense } from "react";
 
+const Home = lazy(() => import('./pages/home'))
 
 
 function App() {

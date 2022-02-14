@@ -1,7 +1,11 @@
 import { lazy, useEffect, useState } from "react";
 import "./style.css"
 
-function Home() {
+interface HomeProps {
+  pizza?: string;
+}
+
+function Home(props: HomeProps) {
 
   const [pizza, setPizza] = useState(Object);
 

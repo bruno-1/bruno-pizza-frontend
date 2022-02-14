@@ -1,26 +1,28 @@
 import { lazy, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import "./style.css"
 
-interface HomeProps {
-  pizza?: string;
-}
-
-function Home(props: HomeProps) {
-
+function Home() {
+  
+  
+  const { pizzaNick } = useParams();
   const [pizza, setPizza] = useState(Object);
-
+  const [imgPizza, setImgPizza] = useState('');
   const HeaderHome = lazy(() => import("../../components/header-home"));
   const Button = lazy(() => import("../../components/button"));
+
   
-  useEffect(() => {    
+  useEffect(() => {
     async function getPizza() {
-      return await fetch('http://localhost:4000/pizza/seafood-pizza');
+      await fetch(`http://localhost:4000/pizza/${pizzaNick}`)
+        .then(pizza => pizza.json()).then((pizza) => {
+          setPizza(pizza);
+        });
+
+      setImgPizza(URL.createObjectURL( await (await fetch(`http://localhost:4000/pizza/image/${pizzaNick}.png`)).blob()));
     }
-    
-    getPizza().then(pizza => pizza.json()).then((pizza) => {
-      setPizza(pizza);
-    });
-  }, [pizza]);
+    getPizza();
+  }, [pizzaNick]);
 
   
   return (
@@ -50,7 +52,7 @@ function Home(props: HomeProps) {
         </section>
       </main>
       <footer className="footer">
-        <img className="image__footer" src="./images/seafood-pizza.png" alt="Seafood Pizza" />
+        <img className="image__footer" src={imgPizza} alt="Seafood Pizza" />
         <Button >GO TO MENU</Button>
       </footer>
     </section>

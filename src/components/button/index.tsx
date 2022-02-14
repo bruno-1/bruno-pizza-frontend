@@ -1,13 +1,13 @@
-import { ButtonHTMLAttributes, Component } from "react";
+import { ButtonHTMLAttributes } from "react";
 import "./style.css"
 
 interface BtnProps extends ButtonHTMLAttributes<HTMLButtonElement> { }
 
-class Button extends Component<BtnProps> {
+function Button(props: BtnProps) {
 
-  render() {
-    return (<button className="button">{this.props.children}</button>)
-  }
+  return(
+    <button className="button">{props.children}</button>
+  )
 }
 
 export default Button;

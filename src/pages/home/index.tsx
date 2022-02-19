@@ -1,30 +1,34 @@
-import { lazy, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import "./style.css"
+import React from 'react';
+import {useParams} from 'react-router-dom';
+import './style.css';
 
+/**
+ * Component Home
+ * @return {JSX.Element}
+*/
 function Home() {
-  
-  
-  const { pizzaNick } = useParams();
-  const [pizza, setPizza] = useState(Object);
-  const [imgPizza, setImgPizza] = useState('');
-  const HeaderHome = lazy(() => import("../../components/header-home"));
-  const Button = lazy(() => import("../../components/button"));
+  const {pizzaNick} = useParams();
+  const [pizza, setPizza] = React.useState(Object);
+  const [imgPizza, setImgPizza] = React.useState('');
+  const HeaderHome = React.lazy(() => import('../../components/header-home'));
+  const Button = React.lazy(() => import('../../components/button'));
 
-  
-  useEffect(() => {
+  React.useEffect(() => {
+    /**
+     * Get Pizza from API
+    */
     async function getPizza() {
       await fetch(`http://localhost:4000/pizza/${pizzaNick}`)
-        .then(pizza => pizza.json()).then((pizza) => {
-          setPizza(pizza);
-        });
+          .then((pizza) => pizza.json()).then((pizza) => {
+            setPizza(pizza);
+          });
 
       setImgPizza(URL.createObjectURL( await (await fetch(`http://localhost:4000/pizza/image/${pizzaNick}.png`)).blob()));
     }
     getPizza();
   }, [pizzaNick]);
 
-  
+
   return (
     <section className="home">
       <HeaderHome />
@@ -56,7 +60,7 @@ function Home() {
         <Button >GO TO MENU</Button>
       </footer>
     </section>
-  )
+  );
 }
 
 export default Home;

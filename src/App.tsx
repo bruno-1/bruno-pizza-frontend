@@ -5,9 +5,11 @@
 
 import React from 'react';
 import {Route, Routes} from 'react-router-dom';
+// import Login from './pages/login';
 
 
 const Home = React.lazy(() => import('./pages/home'));
+const Login = React.lazy(() => import('./pages/login'));
 
 /**
  * Component App
@@ -17,6 +19,7 @@ function App() {
   return (
     <React.Suspense fallback>
       <Routes>
+        <Route path="/" element={<Login />} />
         <Route path="/:pizzaNick" element={<Home />} />
       </Routes>
     </React.Suspense>

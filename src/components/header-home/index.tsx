@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from '../logo';
 import './style.css';
 
 /**
@@ -8,9 +9,7 @@ import './style.css';
 function HeaderHome() {
   return (
     <header className="header__home">
-      <h1 className="title__header">
-        <span className="green">Bru</span>
-        no Pi<span className="red">zza</span></h1>
+      <Logo className="logo__header"/>
       <div className="basket__header">
         <i className="icon__basket fas fa-shopping-basket"></i>
         <span className="amount__basket">1</span>

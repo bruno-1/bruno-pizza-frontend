@@ -5,18 +5,9 @@
   margin-bottom: 2.5vh;
 }
 
-.title__header {
-  color: #fff;
-  margin: 0;
+.logo__header {
   margin-left: 25px;
-  font-family: 'Comforter', cursive;
-  font-weight: 400;
-  font-size: 2.5rem;
 }
-
-.green { color: #008000; }
-
-.red { color: #ff0000; }
 
 .basket__header {
   color: #fff;
